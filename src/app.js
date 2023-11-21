@@ -10,17 +10,20 @@
 //   console.log("Hello Rigo from the console!");
 // };
 
-let pronoun = ['the', 'our'];
-let adj = ['great', 'big'];
-let noun = ['jogger', 'racoon'];
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let extension = [".com", ".net", ".us", ".io"];
 
 let domainNames = [];
 
-for (let i = 0; i < pronoun.length; i++) {
-  for (let j = 0; j < adj.length; j++) {
-    for (let k = 0; k < noun.length; k++) {
-      let domain = `${pronoun[i]}${adj[j]}${noun[k]}.com`;
-      domainNames.push(domain);
+for (let n = 0; n < extension.length; n++) {
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        let domain = `${pronoun[i]}${adj[j]}${noun[k]}${extension[n]}`;
+        domainNames.push(domain);
+      }
     }
   }
 }
