@@ -17,10 +17,11 @@ let extension = [".com", ".net", ".us", ".io"];
 
 let domainNames = [];
 
-for (let n = 0; n < extension.length; n++) {
+
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
+        for (let n = 0; n < extension.length; n++) {
         let domain = `${pronoun[i]}${adj[j]}${noun[k]}${extension[n]}`;
         domainNames.push(domain);
       }
